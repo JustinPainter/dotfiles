@@ -12,9 +12,15 @@ export FPATH=/Users/jlpainte/.fpath:$FPATH
 # Put coreutiles manpages into $MANPATH
 export MANPATH="/usr/local/man:/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
-# Set github API key for homebrew access
+# Setup homebrew environment
+#   Github API key for homebrew access
+#   Homebrew Cask options
+#   Text editor for homebrew to use
 export HOMEBREW_GITHUB_API_TOKEN=b6683a34ffb4768a3d73026a4b6fa69c16cab012
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export HOMEBREW_EDITOR="atom -n"
+export BREWFILE="$HOME/.brewfile"
+export CASKFILE="$HOME/.caskfile"
 
 # Setup Go environment
 export GOPATH=/Users/jlpainte/Projects/openblockchain/src
@@ -31,12 +37,12 @@ export GREP_COLOR='3;35'
 export LESS="-XFR"
 
 # Set editor environment variables
-export VISUAL='vi'
+# export VISUAL='vi'
 export EDITOR='atom -a'
 export GIT_EDITOR='atom -n --safe --wait'
 
-# set project folder that we can `c [tab]` to
-export PROJECTS="$HOME/Code"
+# set project folder that we can `p [tab]` to
+export PROJECTS="$HOME/Projects"
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
