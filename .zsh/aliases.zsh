@@ -15,6 +15,8 @@ alias find='gfind'
 
 # Alias env command to sort alphabetically
 alias env='env | sort'
+alias bk="bindkey | sort"
+alias findkey="bindkey | grep"
 
 # Use coreutils ls and give it a make-over
 alias l='gls -1AG | sort | colorit'
@@ -25,8 +27,8 @@ alias lsdot='gls -FA | egrep "^\." | colorit'
 # Try to minimize navigation frustration
 alias cd-='cd -'
 alias cd..='cd ..'
-alias ..='cd ..'
-alias ...='cd ../..'
+# alias ..='cd ..'
+# alias ...='cd ../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
@@ -60,7 +62,10 @@ alias projects='~/Projects'
 alias ip=myip
 
 # Make things execute, damnit
-alias chmodx='chmod +x'
+alias addx='chmod +x'
+
+# Make things not execute
+alias remx='chmod -x'
 
 # Always do -j because we don't want to change anything
 alias date='date -j'
