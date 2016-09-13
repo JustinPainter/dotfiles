@@ -6,8 +6,10 @@
 #  $HOME bin       [$HOME/bin]
 export PATH=/usr/local/opt/go/libexec/bin:/Users/$USER/bin:$HOME/Library/Jazz/scmtools/eclipse:/usr/local/sbin:$HOME/bin:$PATH
 
-# Put ~/.fpath into the $FPATH
-export FPATH=/Users/jlpainte/.fpath:$FPATH
+# Configure shell history
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
 
 # Put coreutiles manpages into $MANPATH
 export MANPATH="/usr/local/man:/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"

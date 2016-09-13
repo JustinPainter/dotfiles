@@ -41,20 +41,6 @@ any() {
     fi
 }
 
-# -------------------------------------------------------------------
-# Mac specific functions
-# -------------------------------------------------------------------
-if [[ $IS_MAC -eq 1 ]]; then
-
-    # view man pages in Preview
-    pman() { ps=`mktemp -t manpageXXXX`.ps ; man -t $@ > "$ps" ; open "$ps" ; }
-
-    # function to show interface IP assignments
-    ips() { foo=`/Users/mark/bin/getip.py; /Users/mark/bin/getip.py en0; /Users/mark/bin/getip.py en1`; echo $foo; }
-
-    # notify function - http://hints.macworld.com/article.php?story=20120831112030251
-    notify() { automator -D title=$1 -D subtitle=$2 -D message=$3 ~/Library/Workflows/DisplayNotification.wflow }
-fi
 
 # -------------------------------------------------------------------
 # myIP address

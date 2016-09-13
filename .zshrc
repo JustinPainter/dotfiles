@@ -3,7 +3,6 @@
 # Open up OS X's restrictive open file limit
 ulimit -n 65536
 ulimit -u 2048
-unsetopt MULTIBYTE
 
 # shortcut to this dotfiles path is $ZSH
 export ZSH="$HOME/.zsh"
@@ -23,32 +22,17 @@ source <(antibody init)
 # Source GRC for pretty colors
 source "`brew --prefix`/etc/grc.bashrc"
 
-# Values for TERMINAL_PROGRAM
-#  iTerm.app
-#  Terminal-Plus
-#  Apple_Terminal
-
 # Set alias for listing utilities I often forget about
-set -A UTILS buku, jo, mas, mlr, httpie, yadm
+set -A UTILS buku, deer, jo, mackup, mas, mlr, httpie, yadm
 alias utils='echo $UTILS'
 
-# Enable shims for virtual environments
-if which direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
-if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# source ~/.zsh/checks.zsh
 # source ~/.zsh/colors.zsh
 # source ~/.zsh/window.zsh
 source ~/.zsh/options.zsh
 source ~/.zsh/colors.zsh
-# source ~/.zsh/prompt.zsh
 source ~/.zsh/completion.zsh
 source ~/.zsh/bindkeys.zsh
-# source ~/.zsh/functions.zsh
-# source ~/.zsh/history.zsh
-# source ~/.zsh/zsh_hooks.zsh
-# source  ${HOME}/.dotfiles/z/z.sh
+source ~/.zsh/functions.zsh
 
 # Stop checking mail when opening terminal.
 unset MAILCHECK
@@ -74,7 +58,7 @@ PURE_PROMPT_SYMBOL=➜
 # Load antibody bundles
 antibody bundle mafredri/zsh-async
 antibody bundle justinpainter/pure
-ani bundle zsh-users/zsh-completions
+antibody bundle zsh-users/zsh-completions
 
 __reload_dotfiles() {
   PATH="$(command -p getconf PATH):/usr/local/bin"
@@ -82,10 +66,22 @@ __reload_dotfiles() {
   cd . || return 1
 }
 
-alias reload!='__reload_dotfiles'
 
 # iTerm2 integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Enable shims for virtual environments
+if which direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
+if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+autoload -Uz compinit
+typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
+if [ $(date +'%j') != $updated_at ]; then
+  compinit
+else
+  compinit -C
+fi
 
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}; do
@@ -98,5 +94,3 @@ antibody bundle <<EOF
   zsh-users/zsh-syntax-highlighting
   zsh-users/zsh-history-substring-search
 EOF
-
-autoload zkbd
