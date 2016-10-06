@@ -28,7 +28,7 @@ setopt HIST_VERIFY
 
 ## ===== Completion
 unsetopt MENU_COMPLETE # do not autoselect the first completion entry
-setopt ALWAYS_TO_END # When completing from the middle of a word, move the cursor to the end of the word
+unsetopt ALWAYS_TO_END # When completing from the middle of a word, move the cursor to the end of the word
 setopt AUTO_MENU # show completion menu on successive tab press. needs unsetop menu_complete to work
 # setopt auto_name_dirs # any parameter that is set to the absolute name of a directory immediately becomes a name for that directory
 setopt COMPLETE_IN_WORD # Allow completion from within a word/phrase

@@ -33,16 +33,9 @@ source ~/.zsh/colors.zsh
 source ~/.zsh/completion.zsh
 source ~/.zsh/bindkeys.zsh
 source ~/.zsh/functions.zsh
-
-# Stop checking mail when opening terminal.
-unset MAILCHECK
-
 source ~/.zsh/aliases.zsh
 
-# Load the zmv file renaming utility
 autoload zmv
-
-# Load the deer zle file browser widget
 autoload -U deer
 
 # Bind deer to the zle line editor
@@ -76,6 +69,7 @@ if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 autoload -Uz compinit
+
 typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
 if [ $(date +'%j') != $updated_at ]; then
   compinit
