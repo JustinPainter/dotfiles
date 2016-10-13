@@ -1,5 +1,8 @@
+alias reload="source ~/.zshrc"
+
 # Provide a shortcut to edit .zshrc
 alias zshconfig="atom -a ~/.zshrc"
+alias zshenvconfig="atom -a ~/.zshenv"
 
 # Establish some safety nets
 alias mv='mv -i'

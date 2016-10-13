@@ -4,7 +4,7 @@
 #  scmtool for RTC [/Users/jlpainte/Library/Jazz/scmtools/eclipse]
 #  local sbin      [/usr/local/sbin]
 #  $HOME bin       [$HOME/bin]
-export PATH=/usr/local/opt/go/libexec/bin:/Users/$USER/bin:$HOME/Library/Jazz/scmtools/eclipse:/usr/local/sbin:$HOME/bin:$PATH
+export PATH=/usr/local/opt/go/libexec/bin:/Users/$USER/bin:$HOME/Library/Jazz/scmtools/eclipse:/usr/local/sbin:$HOME/bin:$HOME/.nodenv/bin:$PATH
 
 # Configure shell history
 HISTFILE=~/.zsh_history
