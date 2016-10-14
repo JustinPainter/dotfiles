@@ -1,0 +1,303 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+.",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "ctrl+shift+v",
+    "command": "workbench.action.terminal.paste",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.terminal.new"
+  },
+  {
+    "key": "ctrl+shift+x",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+o",
+    "command": "workbench.action.output.toggleOutput"
+  },
+  {
+    "key": "cmd+\\",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "cmd+-",
+    "command": "workbench.action.evenEditorWidths"
+  },
+  {
+    "key": "ctrl+shift+d",
+    "command": "workbench.view.debug"
+  },
+  {
+    "key": "ctrl+shift+p",
+    "command": "workbench.actions.view.problems"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "ctrl+shift+x",
+    "command": "workbench.view.extensions"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "workbench.view.git"
+  },
+  {
+    "key": "ctrl+shift+f",
+    "command": "workbench.view.search"
+  },
+  {
+    "key": "cmd+=",
+    "command": "workbench.action.maximizeEditor",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+space",
+    "command": "editor.action.triggerParameterHints",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+k cmd+j",
+    "command": "workbench.action.focusPreviousGroup"
+  },
+  {
+    "key": "cmd+k cmd+k",
+    "command": "workbench.action.focusNextGroup"
+  },
+  {
+    "key": "cmd+k cmd+p",
+    "command": "workbench.action.navigateEditorGroups"
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "extension.align",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+s",
+    "command": "sortLines.sortLines",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+f6",
+    "command": "sortLines.sortLinesReverse",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+f9",
+    "command": "sortLines.sortLinesCaseInsensitive",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+ctrl+l",
+    "command": "editor.action.selectHighlights",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+s",
+    "command": "editor.action.sortLinesAscending"
+  },
+  {
+    "key": "ctrl+shift+alt+s",
+    "command": "editor.action.sortLinesDescending"
+  },
+  {
+    "key": "ctrl+\\",
+    "command": "workbench.action.splitEditor"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "cursorLeft",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "cursorDown",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "cursorUp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "cursorLeft",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+u",
+    "command": "scrollPageUp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "scrollPageDown",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "subwordNavigation.cursorSubwordLeft",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+h",
+    "command": "subwordNavigation.cursorSubwordLeft",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "subwordNavigation.cursorSubwordRight",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "subwordNavigation.cursorSubwordRight",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+left",
+    "command": "subwordNavigation.cursorSubwordLeftSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+h",
+    "command": "subwordNavigation.cursorSubwordLeftSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+right",
+    "command": "subwordNavigation.cursorSubwordRightSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+backspace",
+    "command": "subwordNavigation.deleteSubwordLeft",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+delete",
+    "command": "subwordNavigation.deleteSubwordRight",
+    "when": "editorTextFocus"
+  },
+  //-------- Unbind Commands --------
+  {
+    "key": "cmd+f2",
+    "command": "-editor.action.changeAll",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+cmd+a",
+    "command": "-extension.align",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+k cmd+j",
+    "command": "-editor.unfoldAll",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+k cmd+k",
+    "command": "-editor.action.defineKeybinding",
+    "when": "editorTextFocus && !editorReadonly && editorLangId == 'json'"
+  },
+  {
+    "key": "cmd+\\",
+    "command": "-workbench.action.splitEditor"
+  },
+  {
+    "key": "cmd+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "shift+cmd+=",
+    "command": "-workbench.action.zoomIn"
+  },
+  {
+    "key": "cmd+=",
+    "command": "-workbench.action.zoomIn"
+  },
+  {
+    "key": "shift+cmd+-",
+    "command": "-workbench.action.zoomOut"
+  },
+  {
+    "key": "cmd+-",
+    "command": "-workbench.action.zoomOut"
+  },
+  {
+    "key": "shift+cmd+d",
+    "command": "-workbench.view.debug"
+  },
+  {
+    "key": "shift+cmd+m",
+    "command": "-workbench.actions.view.problems"
+  },
+  {
+    "key": "shift+cmd+e",
+    "command": "-workbench.view.explorer"
+  },
+  {
+    "key": "shift+cmd+x",
+    "command": "-workbench.view.extensions"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.git"
+  },
+  {
+    "key": "shift+cmd+f",
+    "command": "-workbench.view.search"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "-deleteAllRight",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "-cursorUp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "-deleteLeft",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+u",
+    "command": "-extension.changeCase",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+u",
+    "command": "-workbench.action.output.toggleOutput"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-deleteRight",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "-extension.slackUploadFileCurrent"
+  }
+]
