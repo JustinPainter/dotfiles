@@ -1,52 +1,74 @@
 // Place your key bindings in this file to overwrite the defaults
 [
+  //-------- Terminal --------
   {
-    "key": "ctrl+shift+j",
+    "key": "ctrl+cmd+h",
     "command": "workbench.action.terminal.focusPrevious",
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+shift+k",
+    "key": "ctrl+cmd+l",
     "command": "workbench.action.terminal.focusNext",
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+shift+.",
+    "key": "ctrl+cmd+.",
     "command": "workbench.action.terminal.focus"
   },
   {
-    "key": "ctrl+shift+v",
-    "command": "workbench.action.terminal.paste",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+shift+t",
+    "key": "ctrl+cmd+t",
     "command": "workbench.action.terminal.new"
   },
   {
-    "key": "ctrl+shift+x",
+    "key": "ctrl+cmd+x",
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
   },
+  {
+    "key": "ctrl+cmd+space",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  //-------- Panels --------
   {
     "key": "ctrl+shift+o",
     "command": "workbench.action.output.toggleOutput"
   },
   {
+    "key": "ctrl+shift+p",
+    "command": "workbench.actions.view.problems"
+  },
+  {
     "key": "cmd+\\",
     "command": "workbench.action.toggleSidebarVisibility"
   },
+  //-------- Editor Window --------
   {
     "key": "cmd+-",
     "command": "workbench.action.evenEditorWidths"
   },
   {
-    "key": "ctrl+shift+d",
-    "command": "workbench.view.debug"
+    "key": "cmd+=",
+    "command": "workbench.action.maximizeEditor",
+    "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+p",
-    "command": "workbench.actions.view.problems"
+    "key": "ctrl+cmd+h",
+    "command": "workbench.action.focusPreviousGroup",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+cmd+l",
+    "command": "workbench.action.focusNextGroup",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+\\",
+    "command": "workbench.action.splitEditor"
+  },
+  //-------- Sidebar --------
+  {
+    "key": "ctrl+shift+d",
+    "command": "workbench.view.debug"
   },
   {
     "key": "ctrl+shift+e",
@@ -64,64 +86,30 @@
     "key": "ctrl+shift+f",
     "command": "workbench.view.search"
   },
-  {
-    "key": "cmd+=",
-    "command": "workbench.action.maximizeEditor",
-    "when": "editorTextFocus"
-  },
+  //-------- Intellisense --------
   {
     "key": "shift+alt+space",
     "command": "editor.action.triggerParameterHints",
     "when": "editorTextFocus"
   },
+  //-------- Basic Editing --------
   {
-    "key": "cmd+k cmd+j",
-    "command": "workbench.action.focusPreviousGroup"
-  },
-  {
-    "key": "cmd+k cmd+k",
-    "command": "workbench.action.focusNextGroup"
-  },
-  {
-    "key": "cmd+k cmd+p",
-    "command": "workbench.action.navigateEditorGroups"
-  },
-  {
-    "key": "ctrl+shift+a",
+    "key": "alt+a",
     "command": "extension.align",
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+alt+s",
-    "command": "sortLines.sortLines",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "shift+f6",
-    "command": "sortLines.sortLinesReverse",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+f9",
-    "command": "sortLines.sortLinesCaseInsensitive",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "shift+ctrl+l",
+    "key": "alt+l",
     "command": "editor.action.selectHighlights",
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+s",
+    "key": "alt+s",
     "command": "editor.action.sortLinesAscending"
   },
   {
-    "key": "ctrl+shift+alt+s",
+    "key": "shift+alt+s",
     "command": "editor.action.sortLinesDescending"
-  },
-  {
-    "key": "ctrl+\\",
-    "command": "workbench.action.splitEditor"
   },
   {
     "key": "ctrl+h",
@@ -140,21 +128,19 @@
   },
   {
     "key": "ctrl+l",
-    "command": "cursorLeft",
+    "command": "cursorRight",
     "when": "editorTextFocus"
   },
   {
     "key": "ctrl+u",
-    "command": "scrollPageUp",
-    "when": "editorTextFocus"
+    "command": "scrollPageUp"
   },
   {
     "key": "ctrl+d",
-    "command": "scrollPageDown",
-    "when": "editorTextFocus"
+    "command": "scrollPageDown"
   },
   {
-    "key": "ctrl+left",
+    "key": "ctrl+alt+left",
     "command": "subwordNavigation.cursorSubwordLeft",
     "when": "editorTextFocus"
   },
@@ -164,7 +150,7 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+right",
+    "key": "ctrl+alt+right",
     "command": "subwordNavigation.cursorSubwordRight",
     "when": "editorTextFocus"
   },
@@ -174,27 +160,32 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+left",
-    "command": "subwordNavigation.cursorSubwordLeftSelect",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "ctrl+shift+alt+h",
     "command": "subwordNavigation.cursorSubwordLeftSelect",
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+right",
+    "key": "ctrl+shift+alt+l",
     "command": "subwordNavigation.cursorSubwordRightSelect",
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+backspace",
+    "key": "ctrl+shift+alt+left",
+    "command": "subwordNavigation.cursorSubwordLeftSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+right",
+    "command": "subwordNavigation.cursorSubwordRightSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+backspace",
     "command": "subwordNavigation.deleteSubwordLeft",
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+delete",
+    "key": "ctrl+alt+delete",
     "command": "subwordNavigation.deleteSubwordRight",
     "when": "editorTextFocus"
   },
@@ -257,7 +248,8 @@
   },
   {
     "key": "shift+cmd+x",
-    "command": "-workbench.view.extensions"
+    "command": "-workbench.view.extensions",
+    "description": "test"
   },
   {
     "key": "ctrl+shift+g",
@@ -299,5 +291,27 @@
   {
     "key": "ctrl+alt+j",
     "command": "-extension.slackUploadFileCurrent"
+  },
+  {
+    "key": "ctrl+alt+u",
+    "command": "-extension.slackSendSelection"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "-extension.slackUploadFileCurrent"
+  },
+  {
+    "key": "shift+alt+a",
+    "command": "-editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+delete",
+    "command": "-deleteRight",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+j",
+    "command": "-workbench.action.togglePanel"
   }
 ]
