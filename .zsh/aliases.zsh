@@ -4,6 +4,9 @@ alias reload="source ~/.zshrc"
 alias zshconfig="atom -a ~/.zshrc"
 alias zshenvconfig="atom -a ~/.zshenv"
 
+# Alias code-insiders to code so we always use the latest and greatest
+alias code="code-insiders"
+
 # Establish some safety nets
 alias mv='mv -i'
 alias cp='cp -i'

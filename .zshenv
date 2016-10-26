@@ -4,12 +4,18 @@
 #  scmtool for RTC [/Users/jlpainte/Library/Jazz/scmtools/eclipse]
 #  local sbin      [/usr/local/sbin]
 #  $HOME bin       [$HOME/bin]
-export PATH=/usr/local/opt/go/libexec/bin:/Users/$USER/bin:$HOME/Library/Jazz/scmtools/eclipse:/usr/local/sbin:$HOME/bin:$HOME/.nodenv/bin:$PATH
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home
+export PATH=/usr/local/opt/go/libexec/bin:/Users/$USER/bin:$HOME/Library/Jazz/scmtools/eclipse:/usr/local/sbin:$HOME/bin:$HOME/.nodenv/bin:$JAVA_HOME/bin:$PATH
 
 # Configure shell history
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
+
+# Set locale variables
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Put coreutiles manpages into $MANPATH
 export MANPATH="/usr/local/man:/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
@@ -26,7 +32,7 @@ export CASKFILE="$HOME/.caskfile"
 
 # Setup Go environment
 export GOPATH=/Users/jlpainte/Projects/openblockchain/src
-export GOROOT=/usr/local/opt/go
+# export GOROOT=/usr/local/opt/go/bin
 
 # Colorize the grep command output for ease of use (good for log files)##
 export GREP_OPTIONS="--color=auto"
@@ -40,8 +46,11 @@ export LESS="-XFR"
 
 # Set editor environment variables
 # export VISUAL='vi'
-export EDITOR='atom -a'
-export GIT_EDITOR='atom -n --safe --wait'
+export EDITOR='code -n'
+export GIT_EDITOR='code -n -w'
+
+# Gist ID for VSCode Settings Sync
+export VSCODE_SETTINGS_SYNC_ID=786b4789c69ec644609571cbf1ee9094
 
 # set project folder that we can `p [tab]` to
 export PROJECTS="$HOME/Projects"
