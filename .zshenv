@@ -49,6 +49,9 @@ export LESS="-XFR"
 export EDITOR='code -n'
 export GIT_EDITOR='code -n -w'
 
+# Path to eclipse settings file
+export $ECLIPSE_HOME=$HOME/eclipse.ini
+
 # Gist ID for VSCode Settings Sync
 export VSCODE_SETTINGS_SYNC_ID=786b4789c69ec644609571cbf1ee9094
 
