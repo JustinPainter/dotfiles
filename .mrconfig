@@ -1,0 +1,9 @@
+
+[Projects/ibm/ghe/dado-stack]
+checkout = git clone 'git@github.ibm.com:jlpainte/dado-ui.git' 'dado-stack'
+
+[Projects/deer]
+checkout = git clone 'https://github.com/Vifon/deer.git' 'deer'
+
+[Projects/MaterialColorsApp]
+checkout = git clone 'https://github.com/romannurik/MaterialColorsApp.git' 'MaterialColorsApp'
