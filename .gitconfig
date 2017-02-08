@@ -1,0 +1,86 @@
+[user]
+	name = Justin Painter
+	email = justinlpainter@gmail.com
+[advice]
+  statusHints = false
+  pushNonFastForward = false
+[branch]
+  autosetupmerge = true
+[core]
+	excludesfile = /Users/justin/.gitignore_global
+	editor = atom --wait
+  pager = less -FXR
+	autocrlf = false
+	whitespace = space-before-tab
+	trustctime = false
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = green
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = green
+  changed = yellow
+  untracked = magenta
+[push]
+	default = current
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[http]
+	sslVerify = false
+[credential]
+	helper = osxkeychain
+[help]
+	autocorrect = 1
+[mergetool "Kaleidoscope"]
+  prompt = false
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[merge]
+  stat = true
+[mergetool]
+	prompt = false
+[difftool]
+	prompt = false
+[difftool "Kaleidoscope"]
+  trustexitcode = true
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+  renames = copies
+  mnemonicprefix = true
+	tool = Kaleidoscope
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[alias]
+  aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' | sort
+  cm = commit -m
+  co = checkout
+  df = diff
+  dt = difftool
+  goback = reset head@{1}
+  ign = ls-files -o -i --exclude-standard
+  l = "!git log --graph --pretty='tformat:%C(yellow)%h{%C(green)%ar{%C(bold blue)%an{%C(red)%d%C(reset) %s' $* | column -t -s '{' | less -S"
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  log = log --graph --decorate --pretty=oneline --abbrev-commit
+  ls = ls-files
+  mg = merge
+  mt = mergetool
+  pick = cherry-pick
+  st = status
+  wd = diff --word-diff="color"
+[rerere]
+	enabled = true
+[pager]
+  color = true
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
+[merge]
+	tool = Kaleidoscope

@@ -1,0 +1,11 @@
+.DS_Store
+.sublime-workspace
+*.[oa]
+*~
+.node-version
+package.json.bak
+*.sublime-project
+*.sublime-workspace
+*.orig
+.mrconfig
+.mertrc
