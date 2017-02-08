@@ -27,6 +27,7 @@ export MANPATH="/usr/local/man:/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export HOMEBREW_GITHUB_API_TOKEN=b6683a34ffb4768a3d73026a4b6fa69c16cab012
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export HOMEBREW_EDITOR="code-insiders -n"
+export HOMEBREW_BREWFILE="/Users/jlpainte/Dropbox/Dotfiles/Brewfile"
 # export BREWFILE="$HOME/.brewfile"
 export CASKFILE="$HOME/.caskfile"
 
