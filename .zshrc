@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+# Install and configure hombrew via homebrew-file
+# curl -fsSL https://raw.github.com/rcmdnk/homebrew-file/install/install.sh |sh
+
 # Open up OS X's restrictive open file limit
 ulimit -n 65536
 ulimit -u 2048
@@ -63,6 +66,10 @@ __reload_dotfiles() {
 # iTerm2 integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+if [ -f $(brew --prefix)/etc/brew-wrap ];then
+  source $(brew --prefix)/etc/brew-wrap
+fi
+
 # Enable shims for virtual environments
 if which direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
 if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
@@ -88,3 +95,6 @@ antibody bundle <<EOF
   zsh-users/zsh-syntax-highlighting
   zsh-users/zsh-history-substring-search
 EOF
+
+### Added by the Bluemix CLI
+source /usr/local/Bluemix/bx/zsh_autocomplete

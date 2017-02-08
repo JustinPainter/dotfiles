@@ -26,8 +26,8 @@ export MANPATH="/usr/local/man:/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 #   Text editor for homebrew to use
 export HOMEBREW_GITHUB_API_TOKEN=b6683a34ffb4768a3d73026a4b6fa69c16cab012
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export HOMEBREW_EDITOR="atom -n"
-export BREWFILE="$HOME/.brewfile"
+export HOMEBREW_EDITOR="code-insiders -n"
+# export BREWFILE="$HOME/.brewfile"
 export CASKFILE="$HOME/.caskfile"
 
 # Setup Go environment
@@ -46,11 +46,11 @@ export LESS="-XFR"
 
 # Set editor environment variables
 # export VISUAL='vi'
-export EDITOR='code -n'
-export GIT_EDITOR='code -n -w'
+export EDITOR='code-insiders -n'
+export GIT_EDITOR='code-insiders -n -w'
 
 # Path to eclipse settings file
-export $ECLIPSE_HOME=$HOME/eclipse.ini
+export ECLIPSE_HOME=$HOME/eclipse.ini
 
 # Gist ID for VSCode Settings Sync
 export VSCODE_SETTINGS_SYNC_ID=786b4789c69ec644609571cbf1ee9094
@@ -61,3 +61,6 @@ export PROJECTS="$HOME/Projects"
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 export LD_LIBRARY_PATH=/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/bin
+
+# Bluemix CLI settings
+export BLUEMIX_COLOR=true

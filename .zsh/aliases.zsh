@@ -1,8 +1,8 @@
 alias reload="source ~/.zshrc"
 
 # Provide a shortcut to edit .zshrc
-alias zshconfig="atom -a ~/.zshrc"
-alias zshenvconfig="atom -a ~/.zshenv"
+alias zshconfig="code-insiders -n ~/.zshrc"
+alias zshenvconfig="code-insiders -n ~/.zshenv"
 
 # Alias code-insiders to code so we always use the latest and greatest
 alias code="code-insiders"
