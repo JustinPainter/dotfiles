@@ -4,35 +4,21 @@
 tap caskroom/cask
 cask charles
 cask dropbox
-cask evernote
 cask functionflip
 cask google-chrome
 cask kaleidoscope
-cask karabiner
 cask mongochef
 cask mongodb-compass
-cask mono-mdk
-cask path-finder
-cask quitter
-cask real-vnc
 cask skitch
-cask skype
-cask sonarr
-cask spectacle
 cask virtualbox
 cask vlc
 cask xquartz
-
-tap cloudfoundry/tap
-brew cf-cli
 
 tap getantibody/antibody
 brew antibody
 
 tap homebrew/aliases
-
 tap homebrew/bundle
-
 tap homebrew/completions
 
 tap homebrew/core
@@ -98,22 +84,13 @@ brew brew-file
 # Below applications were installed by Cask,
 # but do not have corresponding casks.
 
-#cask cloudfoundry-cli (!)
-#cask dockertoolbox (!)
-
 # App Store applications
 appstore 937984704 Amphetamine
-appstore 918207447 Annotate
 appstore 417375580 BetterSnapTool
 appstore 969418666 ColorSnapper2
-appstore 682658836 GarageBand
 appstore 409183694 Keynote
 appstore 926036361 LastPass
-appstore 1165784816 MQTTBox
 appstore 409203825 Numbers
 appstore 409201541 Pages
 appstore 967805235 Paste
-appstore 866773894 Quiver
 appstore 425424353 The Unarchiver
-appstore 582635628 Toolbox for Keynote
-appstore 408981434 iMovie
