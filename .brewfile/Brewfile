@@ -12,7 +12,6 @@ cask mongodb-compass
 cask skitch
 cask virtualbox
 cask vlc
-cask xquartz
 
 tap getantibody/antibody
 brew antibody
@@ -31,11 +30,9 @@ brew cmake
 brew coreutils
 brew direnv
 brew docker
-brew exercism
 brew findutils
 brew gdbm
 brew git
-brew go
 brew grc
 brew highlight
 brew httpie
@@ -47,7 +44,6 @@ brew makedepend
 brew mas
 brew miller
 brew mongodb
-brew mosquitto
 brew mr
 brew node-build
 brew nodenv
