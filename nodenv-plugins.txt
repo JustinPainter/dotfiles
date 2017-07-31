@@ -1,0 +1,6 @@
+[0m[01;34mnode-build[0m/
+[01;34mnode-build-update-defs[0m/
+[01;34mnodenv-aliases[0m/
+[01;34mnodenv-default-packages[0m/
+[01;34mnodenv-npm-migrate[0m/
+[01;34mnodenv-package-rehash[0m/
