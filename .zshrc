@@ -9,6 +9,7 @@ ulimit -u 2048
 
 # shortcut to this dotfiles path is $ZSH
 export ZSH="$HOME/.zsh"
+export PATH=/usr/local/opt/openssl/bin:/usr/local/opt/go/libexec/bin:$HOME/Library/Jazz/scmtools/eclipse:/usr/local/sbin:$HOME/bin:$HOME/.nodenv/bin:$JAVA_HOME/bin:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH
 
 # all of our zsh files
 # typeset -U config_files
@@ -33,9 +34,9 @@ alias utils='echo $UTILS'
 # source ~/.zsh/window.zsh
 source ~/.zsh/options.zsh
 source ~/.zsh/colors.zsh
-source ~/.zsh/completion.zsh
+# source ~/.zsh/completion.zsh
 source ~/.zsh/bindkeys.zsh
-source ~/.zsh/functions.zsh
+# source ~/.zsh/functions.zsh
 source ~/.zsh/aliases.zsh
 
 autoload zmv
@@ -54,14 +55,13 @@ PURE_PROMPT_SYMBOL=➜
 # Load antibody bundles
 antibody bundle mafredri/zsh-async
 antibody bundle justinpainter/pure
-antibody bundle zsh-users/zsh-completions
+# antibody bundle zsh-users/zsh-completions
 
 __reload_dotfiles() {
   PATH="$(command -p getconf PATH):/usr/local/bin"
   . ~/.zshrc
   cd . || return 1
 }
-
 
 # iTerm2 integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
@@ -70,10 +70,30 @@ if [ -f $(brew --prefix)/etc/brew-wrap ];then
   source $(brew --prefix)/etc/brew-wrap
 fi
 
+# Source Python virtual environment wrapper
+source /usr/local/bin/virtualenvwrapper.sh
+
+echo $ECLIPSE_WORKSPACE
+
 # Enable shims for virtual environments
 if which direnv > /dev/null; then eval "$(direnv hook zsh)"; fi
 if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which ssh-agent > /dev/null; then eval "$(ssh-agent -s)"; fi
+
+# if [ -e "$HOME/.ssh/id_rsa" ] ; then
+#   ssh-add "$HOME/.ssh/id_rsa";
+# fi
+
+# Cloud Security Policy: It is only valid to use iot-deploy 
+#   if performing a first time deployment
+
+# if [ -e "$ECLIPSE_WORKSPACE/iotcloud.infrastructure.openstack.deploy/envs/$USER/ssh/id_rsa" ] ; then
+# 	ssh-add "$ECLIPSE_WORKSPACE/workspace/iotcloud.infrastructure.openstack.deploy/envs/$USER/ssh/id_rsa";
+# fi
+
+# Add as many as you like. Use the -verify flag to check
+#   that the paths are correct.
 
 autoload -Uz compinit
 
@@ -84,17 +104,17 @@ else
   compinit -C
 fi
 
+# Added by the Bluemix CLI
+source /usr/local/Bluemix/bx/zsh_autocomplete
+
 # load every completion after autocomplete loads
-for file in ${(M)config_files:#*/completion.zsh}; do
-  source "$file"
-done
+# for file in ${(M)config_files:#*/completion.zsh}; do
+#   source "$file"
+# done
 
 # Load highlighting and history search
 # Must be dead last
 antibody bundle <<EOF
   zsh-users/zsh-syntax-highlighting
-  zsh-users/zsh-history-substring-search
+#   zsh-users/zsh-history-substring-search
 EOF
-
-### Added by the Bluemix CLI
-source /usr/local/Bluemix/bx/zsh_autocomplete

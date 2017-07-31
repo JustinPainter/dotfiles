@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # Fill $PATH with useful things
 #  coreutils       [/usr/local/opt/coreutils/libexec/gnubin]
 #  bin for Go      [/usr/local/opt/go/libexec/bin]
@@ -6,7 +8,6 @@
 #  $HOME bin       [$HOME/bin]
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home
-export PATH=/usr/local/opt/go/libexec/bin:/Users/$USER/bin:$HOME/Library/Jazz/scmtools/eclipse:/usr/local/sbin:$HOME/bin:$HOME/.nodenv/bin:$JAVA_HOME/bin:$PATH
 
 # Configure shell history
 HISTFILE=~/.zsh_history
@@ -20,6 +21,8 @@ export LANG=en_US.UTF-8
 # Put coreutiles manpages into $MANPATH
 export MANPATH="/usr/local/man:/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
+export GHE_API_TOKEN=7916727018a03f452bef3bfa25f1a09ed7c9cb33
+
 # Setup homebrew environment
 #   Github API key for homebrew access
 #   Homebrew Cask options
@@ -28,7 +31,6 @@ export HOMEBREW_GITHUB_API_TOKEN=b6683a34ffb4768a3d73026a4b6fa69c16cab012
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export HOMEBREW_EDITOR="code-insiders -n"
 export HOMEBREW_BREWFILE="/Users/jlpainte/Dropbox/Dotfiles/Brewfile"
-# export BREWFILE="$HOME/.brewfile"
 export CASKFILE="$HOME/.caskfile"
 
 # Setup Go environment
@@ -36,7 +38,7 @@ export GOPATH=/Users/jlpainte/Projects/openblockchain/src
 # export GOROOT=/usr/local/opt/go/bin
 
 # Colorize the grep command output for ease of use (good for log files)##
-export GREP_OPTIONS="--color=auto"
+export GREP_OPTIONS="--color=always"
 export GREP_COLOR='3;35'
 
 # Configure Less to be less intrusive
@@ -50,14 +52,15 @@ export LESS="-XFR"
 export EDITOR='code-insiders -n'
 export GIT_EDITOR='code-insiders -n -w'
 
-# Path to eclipse settings file
-export ECLIPSE_HOME=$HOME/eclipse.ini
-
 # Gist ID for VSCode Settings Sync
 export VSCODE_SETTINGS_SYNC_ID=786b4789c69ec644609571cbf1ee9094
 
-# set project folder that we can `p [tab]` to
+# Set project folder that we can `p [tab]` to
 export PROJECTS="$HOME/Projects"
+
+# Set Eclipse workspace path
+export ECLIPSE_WORKSPACE="$PROJECTS/ibm/rtc"
+export RTC_WORKSPACE=${ECLIPSE_WORKSPACE}
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
@@ -65,3 +68,9 @@ export LD_LIBRARY_PATH=/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Content
 
 # Bluemix CLI settings
 export BLUEMIX_COLOR=true
+
+export IBMID_USER=jlpainte@us.ibm.com
+export IBMID_PASSWORD=Cl@ss_of_2004
+export RTC_REPOSITORY_URI=https://jazza06.hursley.ibm.com:9443/ccm
+
+# Password for jpainter08.breakthru@gmail.com

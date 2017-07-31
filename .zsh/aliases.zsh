@@ -1,11 +1,17 @@
 alias reload="source ~/.zshrc"
 
+# Aliase for pcregrep
+alias pgrep="pcregrep"
+
+# RTC CLI shortcut
+alias rtc="lscm"
+
 # Provide a shortcut to edit .zshrc
 alias zshconfig="code-insiders -n ~/.zshrc"
 alias zshenvconfig="code-insiders -n ~/.zshenv"
 
 # Alias code-insiders to code so we always use the latest and greatest
-alias code="code-insiders"
+# alias code="code-insiders"
 
 # Establish some safety nets
 alias mv='mv -i'
@@ -25,12 +31,15 @@ alias bk="bindkey | sort"
 alias findkey="bindkey | grep"
 
 # Use coreutils ls and give it a make-over
-alias l='gls -1AG | sort | colorit'
-alias ll='gls -lAG'
+alias l='gls -1AGh | sort | colorit'
+alias ll='gls -lAGh'
 alias ls='gls -GFAh --color'
-alias lsdot='gls -FA | egrep "^\." | colorit'
+alias lsdot='gls -FAh | egrep "^\." | colorit'
 
 # Try to minimize navigation frustration
+alias b='cd -'
+alias .='cd .'
+alias ..='cd ..'
 alias cd-='cd -'
 alias cd..='cd ..'
 # alias ..='cd ..'
@@ -77,24 +86,24 @@ alias remx='chmod -x'
 alias date='date -j'
 
 # Grab the time of day
-hrmin=$(date -j +"%I:%M")
+# hrmin=$(date -j +"%I:%M")
 
-# Pretty print the time of day
-if (($(date +"%H") > 11))
-then
-  TIME="${hrmin}pm"
-else
-  TIME="${hrmin}am"
-fi
+# # Pretty print the time of day
+# if (($(date +"%H") > 11))
+# then
+#   TIME="${hrmin}pm"
+# else
+#   TIME="${hrmin}am"
+# fi
 
 # Setup some time and date shortcuts
-alias _fulldate='date +"%B, %d, %G"'
-alias _date='date +"%m-%d-%Y"'
-alias _time='echo $TIME'
-alias _day='date -j +"%A"'
-alias _week='date -j +"%U"'
-alias _month='date -j +"%B"'
-alias _year='date -j +"%G"'
+# alias _fulldate='date +"%B, %d, %G"'
+# alias _date='date +"%m-%d-%Y"'
+# alias _time='echo $TIME'
+# alias _day='date -j +"%A"'
+# alias _week='date -j +"%U"'
+# alias _month='date -j +"%B"'
+# alias _year='date -j +"%G"'
 
 # Export the time to the environment
-export TIME
+# export TIME

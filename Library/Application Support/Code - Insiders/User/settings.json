@@ -1,0 +1,421 @@
+// Place your settings in this file to overwrite the default settings
+{
+
+  /**
+   * Bookmarks
+   */
+
+  /**
+   * CSS
+   */
+
+  // Do not use duplicate style definitions
+  "css.lint.duplicateProperties": "warning",
+
+  // Unknown property.
+  "css.lint.unknownProperties": "ignore",
+
+  // Property is ignored due to the display. E.g. with 'display: inline', the width, height, margin-top, margin-bottom, and float properties have no effect
+  "css.lint.propertyIgnoredDueToDisplay": "ignore",
+
+  /**
+   * Editor
+   */
+
+  // When enabled, will trim trailing whitespace when saving a file.
+  "editor.trimAutoWhitespace": true,
+
+  //Controls whether the editor has code folding enabled
+  "editor.folding": true,
+
+  // Controls the font family.
+  "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
+
+  // Controls the font size in pixels.
+  "editor.fontSize": 12,
+
+  // Controls whether the editor should render indent guides
+  "editor.renderIndentGuides": true,
+
+  // The number of spaces a tab is equal to. This setting is overriden based on the file contents when `editor.detectIndentation` is on.
+  "editor.tabSize": 2,
+
+  // Controls if suggestions should be accepted 'Enter' - in addition to 'Tab'. Helps to avoid ambiguity between inserting new lines or accepting suggestions.
+  "editor.acceptSuggestionOnEnter": false,
+
+  // Controls whether copying without a selection copies the current line.
+  "editor.emptySelectionClipboard": false,
+
+  /**
+   * Emmet
+   */
+
+  // Define profile for specified syntax or use your own profile with specific rules.
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+
+  /**
+   * External Terminal
+   */
+
+  // Customizes which terminal application to run on OS X.
+  "terminal.external.osxExec": "iTerm.app",
+
+  /**
+   * Extensions
+   */
+
+  // Automatically update extensions
+  "extensions.autoUpdate": true,
+
+  /**
+   * Files
+   */
+
+  // Configure file associations to languages (e.g. "*.extension": "html"). These have precedence over the default associations of the languages installed.
+  "files.associations": {
+    "*.jsx": "javascript"
+  },
+
+  // Configure glob patterns for excluding files and folders.
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/.sublime-workspace": true,
+    "**/.sublime-project": true,
+    "**/.history": true,
+    "**/*.map": true
+  },
+
+  // Configure glob patterns of file paths to exclude from file watching. Changing this setting requires a restart. When you experience Code consuming lots of cpu time on startup, you can exclude large folders to reduce the initial load.
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/dist/**": true,
+    "**/logs/**": true,
+    "**/node_modules/**": true
+  },
+
+  /**
+   * HTML
+   */
+
+  // Configures if the built-in HTML language support suggests Angular V1 tags and properties.
+  "html.suggest.angular1": false,
+
+  // Configures if the built-in HTML language support suggests Ionic tags, properties and values.
+  "html.suggest.ionic": false,
+
+  /**
+   * Search
+   */
+
+  "search.useIgnoreFilesByDefault": true,
+
+  /**
+   * Git
+   */
+
+  // Path to the git executable
+  "git.path": "/usr/local/bin/git",
+
+  /**
+   * Java
+   */
+
+  // Specifies the folder path to the JDK 8 used to launch the Java Language Server.
+  "java.home": "/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home",
+
+  /**
+   * Javascript
+   */
+
+  // Defines space handling after opening and before closing JSX expression braces. Requires TypeScript >= 2.0.6.
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+
+  /**
+   * JSON
+   */
+
+  // Associate schemas to JSON files in the current project
+  "json.schemas": [{
+      "fileMatch": [
+        "/.babelrc"
+      ],
+      "url": "http://json.schemastore.org/babelrc"
+    },
+    {
+      "fileMatch": [
+        "/.bootstraprc"
+      ],
+      "url": "http://json.schemastore.org/bootstraprc"
+    },
+    {
+      "fileMatch": [
+        "bower.json"
+      ],
+      "url": "http://json.schemastore.org/bower"
+    },
+    {
+      "fileMatch": [
+        "/.csscomb.json"
+      ],
+      "url": "http://json.schemastore.org/csscomb"
+    },
+    {
+      "fileMatch": [
+        "/.csslintrc"
+      ],
+      "url": "http://json.schemastore.org/csslintrc"
+    },
+    {
+      "fileMatch": [
+        "/.eslintrc"
+      ],
+      "url": "http://json.schemastore.org/eslintrc"
+    },
+    {
+      "fileMatch": [
+        "jsconfig.json"
+      ],
+      "url": "http://json.schemastore.org/jsconfig"
+    },
+    {
+      "fileMatch": [
+        "/.jshintrc"
+      ],
+      "url": "http://json.schemastore.org/jshintrc"
+    },
+    {
+      "fileMatch": [
+        "tsconfig.json"
+      ],
+      "url": "http://json.schemastore.org/tsconfig"
+    },
+    {
+      "fileMatch": [
+        "typings.json"
+      ],
+      "url": "http://json.schemastore.org/typings"
+    }
+  ],
+
+  /**
+   * Markdown
+   */
+
+  // A list of URLs or local paths to CSS style sheets to use from the markdown preview. Relative paths are interpreted relative to the folder open in the explorer. If there is no open folder, they are interpreted relative to the location of the markdown file. All '\' need to be written as '\\'.
+  "markdown.styles": [
+    "https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css"
+  ],
+
+  /**
+   * Search
+   */
+
+  // Configure glob patterns for excluding files and folders in searches. Inherits all glob patterns from the file.exclude setting.
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/build": true,
+    "**/dist": true
+  },
+
+  /**
+   * ESLint
+   */
+
+  // Controls whether eslint is enabled for JavaScript files or not.
+  "eslint.enable": false,
+
+  // A path added to NODE_PATH when resolving the eslint module.
+  "eslint.nodePath": "/Users/jlpainte/.nodenv/shims/node",
+
+  /**
+   * Terminal
+   */
+
+  //Controls the line height of the terminal, this number is multipled by the terminal font size to get the actual line-height in pixels.
+  "terminal.integrated.lineHeight": 1.4,
+
+  // Controls whether the terminal cursor blinks.
+  "terminal.integrated.cursorBlinking": true,
+
+  /**
+   * Window
+   */
+
+  // When enabled, will open files in a new window instead of reusing an existing instance.
+  "window.openFilesInNewWindow": "off",
+
+  // Controls if a window should restore to full screen mode if it was exited in full screen mode.
+  "window.restoreFullscreen": true,
+  "window.zoomLevel": 0,
+
+  /**
+   * NPM Intellisense
+   */
+
+  // Scans devDependencies as well
+  "npm-intellisense.scanDevDependencies": true,
+  "npm-intellisense.importLinebreak": ";\n",
+  "npm-intellisense.showBuildInLibs": true,
+  "npm-intellisense.packageSubfoldersIntellisense": true,
+
+  /**
+   * Path Intellisense
+   */
+
+  // Adds the file extension to a import statements
+  // "path-intellisense.extensionOnImport": true,
+
+  /**
+   * Color Highlight
+   */
+
+  "color-highlight.matchWords": false,
+
+  /**
+   * ES Quotes
+   */
+
+  // Default normal quote, can be ' or ".
+  "esQuotes.defaultQuote": "\\'",
+
+  /**
+   * Align
+   */
+
+  "align.leftSeparators": [
+    ":"
+  ],
+
+  "align.rightSeparators": [
+    "from",
+    "=",
+    "+=",
+    "-=",
+    "*=",
+    "/=",
+    "?=",
+    "|=",
+    "%=",
+    ".=",
+    "=>"
+  ],
+
+  "align.spaceSeparators": [
+    "from",
+    "=",
+    "+=",
+    "-=",
+    "*=",
+    "/=",
+    "?=",
+    "|=",
+    "%=",
+    ".=",
+    "=>"
+  ],
+
+  "align.ignoreSeparators": [
+    "::"
+  ],
+
+  /**
+   * Code Settings Sync Configuration Settings
+   */
+
+  // Github GIST ID for Settings Sync.
+  "sync.gist": "786b4789c69ec644609571cbf1ee9094",
+
+  // Settings Sync last upload date. Set it as empty if you want to manully hit download.
+  "sync.lastUpload": "2017-07-17T08:00:59.093Z",
+
+  // Set it true to Auto Download the settings on code start. Code Restart Required to affect.
+  "sync.autoDownload": false,
+
+  // Set it true to Auto Upload on the settings change. Code Restart Required to affect.
+  "sync.autoUpload": true,
+
+  // Settings Sync last download date. Set it as empty if you want to manully hit download.
+  "sync.lastDownload": "1970-01-01T00:00:00.000Z",
+
+  // Save the Code Settings Sync Version for migration code. Please dont remove this.
+  "sync.version": 262,
+
+  // Shows the summary page after download and upload.
+  "sync.showSummary": true,
+
+  // Set it to true if you want to download the settings everytime code starts.
+  "sync.forceDownload": false,
+
+  // Set it to true if you want to create or download from Anonymous Gist. Extension won't ask for Github token
+  "sync.anonymousGist": false,
+
+  /**
+   * Document This configuration
+   */
+
+  // When enabled, JSDoc comments for functions and methods will include @description.
+  "docthis.includeDescriptionTag": true,
+
+  /**
+   * HTML2JSX
+   */
+
+  // CreateClass for *.jsx or extends React.Compoennt for *.tsx
+  "html2jsx.createClass": false,
+
+  /**
+   * XML Tools Configuration
+   */
+
+  "editor.wordWrap": "off",
+  "vsicons.dontShowNewVersionMessage": true,
+  "vsicons.projectDetection.autoReload": true,
+  "workbench.colorTheme": "Monokai Extended",
+  "workbench.iconTheme": "material-icon-theme",
+  "sync.host": "",
+  "sync.pathPrefix": "",
+
+    /**
+   * Insert Numbers Settings
+   */
+
+   // Begin sequence with this number.
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 70,
+  "gitlens.blame.annotation.style": "compact",
+  "gitlens.blame.annotation.sha": true,
+  "gitlens.advanced.toggleWhitespace.enabled": true,
+  "gitProjectManager.baseProjectsFolders": [
+    "~/Projects"
+  ],
+  "gitProjectManager.ignoredFolders": [
+    "node_modules"
+  ],
+  "gitProjectManager.recentProjectsListSize": 7,
+  "javascript.implicitProjectConfig.checkJs": true,
+  "vsicons.presets.jsOfficial": true,
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#a5da00"
+  },
+  "moveOn.moveOnFrom": [
+    "'",
+    ")",
+    "]",
+    "}",
+    "\"",
+    "`"
+  ],
+  "terminal.integrated.cursorStyle": "line",
+  "jsDocCompletion.enabled": true,
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "editor.tabCompletion": true,
+  "sync.quietSync": false,
+  "sync.askGistName": false
+}

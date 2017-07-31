@@ -1,6 +1,6 @@
 [user]
 	name = Justin Painter
-	email = justinlpainter@gmail.com
+	email = jlpainte@us.ibm.com
 [advice]
   statusHints = false
   pushNonFastForward = false
@@ -84,3 +84,5 @@
 	diff = diff-highlight | less
 [merge]
 	tool = Kaleidoscope
+[gui]
+	recentrepo = /Users/jlpainte/Projects/ibm/ghe/platform-ui-components

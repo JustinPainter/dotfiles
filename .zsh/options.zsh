@@ -1,4 +1,5 @@
 ## ===== Basics
+setopt AUTO_CD
 setopt NO_BEEP # don't beep on error
 setopt NO_BG_NICE
 # setopt interactive_comments # Allow comments even in interactive shells (especially for Muness)
