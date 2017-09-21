@@ -21,8 +21,6 @@ export LANG=en_US.UTF-8
 # Put coreutiles manpages into $MANPATH
 export MANPATH="/usr/local/man:/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
-export GHE_API_TOKEN=7916727018a03f452bef3bfa25f1a09ed7c9cb33
-
 # Setup homebrew environment
 #   Github API key for homebrew access
 #   Homebrew Cask options
@@ -58,19 +56,6 @@ export VSCODE_SETTINGS_SYNC_ID=786b4789c69ec644609571cbf1ee9094
 # Set project folder that we can `p [tab]` to
 export PROJECTS="$HOME/Projects"
 
-# Set Eclipse workspace path
-export ECLIPSE_WORKSPACE="$PROJECTS/ibm/rtc"
-export RTC_WORKSPACE=${ECLIPSE_WORKSPACE}
-
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 export LD_LIBRARY_PATH=/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/bin
-
-# Bluemix CLI settings
-export BLUEMIX_COLOR=true
-
-export IBMID_USER=jlpainte@us.ibm.com
-export IBMID_PASSWORD=Cl@ss_of_2004
-export RTC_REPOSITORY_URI=https://jazza06.hursley.ibm.com:9443/ccm
-
-# Password for jpainter08.breakthru@gmail.com
