@@ -5,12 +5,12 @@ tap caskroom/cask
 cask charles
 cask dropbox
 cask functionflip
-cask google-chrome
+# cask google-chrome
 cask kaleidoscope
 cask mongochef
 cask mongodb-compass
 cask skitch
-cask virtualbox
+# cask virtualbox
 cask vlc
 
 # tap getantibody/antibody
