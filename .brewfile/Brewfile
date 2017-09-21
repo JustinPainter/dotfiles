@@ -13,8 +13,8 @@ cask skitch
 cask virtualbox
 cask vlc
 
-tap getantibody/antibody
-brew antibody
+# tap getantibody/antibody
+# brew antibody
 
 tap homebrew/aliases
 tap homebrew/bundle
@@ -29,7 +29,7 @@ brew cask
 brew cmake
 brew coreutils
 brew direnv
-brew docker
+# brew docker
 brew findutils
 brew gdbm
 brew git
@@ -62,13 +62,12 @@ brew squid
 brew wget
 brew xz
 brew yadm
-brew zsh
+# brew zsh
 
 tap homebrew/dupes
-
 tap homebrew/versions
-
 tap nodenv/nodenv
+
 brew nodenv-npm-migrate
 brew nodenv-package-json-engine
 brew nodenv-package-rehash
